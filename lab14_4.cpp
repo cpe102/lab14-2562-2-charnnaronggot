@@ -17,5 +17,21 @@ int main(){
 	
 	return 0;
 }
+void shuffle(int &a,int &b, int &c, int &d){
+	int currency[] = {a,b,c,d} ;
+	int x ,y ; 
+	for (int i = 0 ; i < 3 ; i++){
+		x = rand() % 5 ;
+		y = rand() % 5;
+		int temp = currency[x] ;
+		currency[x] = currency[y] ;
+		currency[y] = temp ;
 
+		a = currency[0] ;
+		b = currency[1];
+		c = currency[2];
+		d = currency[3];
+
+	} 
+}
 //Write definition of shuffle() here 
